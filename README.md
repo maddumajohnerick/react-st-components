@@ -1,1 +1,1 @@
-# st-components
+# react-st-components

@@ -1,0 +1,47 @@
+{
+  "name": "react-st-components",
+  "version": "1.0.0",
+  "description": "styled components for react",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maddumajohnerick/st-components.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maddumajohnerick/st-components/issues"
+  },
+  "keywords": [
+    "st-components",
+    "components",
+    "styled",
+    "react"
+  ],
+  "author": "John Erick Madduma",
+  "homepage": "https://github.com/maddumajohnerick/st-components#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "styled-components": "^4.3.1",
+    "webpack": "^4.33.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "styled-components": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
