@@ -720,22 +720,24 @@ const StyledDropdownButton = styled(STButton).attrs(() => ({ as: 'div'}))`
 `;
 
 export const STDropdownButton = (props) => {
-  // const [focus, setFocus] = useState(false);
-  // const btnRef = useRef(null);
+  const [focus, setFocus] = useState(false);
+  const btnRef = useRef(null);
 
-  // useEffect(() => {
-  //   window.addEventListener("click", closeDropdown);
-  //   return ( () => {
-  //       window.removeEventListener("click", closeDropdown);
-  //   });
-  // }, [])
+  useEffect(() => {
+    window.addEventListener("click", closeDropdown);
+    return ( () => {
+        window.removeEventListener("click", closeDropdown);
+    });
+  }, [])
 
-  // const closeDropdown = (e) => {
-  //   btnRef.current !== e.target && setFocus(false);
-  // };
+  const closeDropdown = (e) => {
+    btnRef.current !== e.target && setFocus(false);
+  };
 
   return (
-    <StyledDropdownButton {...props}>
+    <StyledDropdownButton onClick={() => {
+      setFocus(!focus)
+    }} className={focus && 'focused'} ref={btnRef} {...props}>
       {props.children}
     </StyledDropdownButton>
   )
@@ -753,37 +755,41 @@ const StyledDropdownMenu = styled.div`
 `;
 
 export const STDropdownMenu = ({drop, children}) => {
-  // const dropRef = useRef(null);
-  // const [inView,setInView] = useState(false);
-  // const [height,setHeight] = useState(0);
+  const dropRef = useRef(null);
+  const [inView,setInView] = useState(false);
+  const [height,setHeight] = useState(0);
   
-  // useEffect(() => {
-  //   window.addEventListener("scroll", scrollHandler);
-  //   setInView(isInView());
-  //   return ( () => {
-  //       window.removeEventListener("scroll", scrollHandler);
-  //   });
-  // }, [])
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    setInView(isInView());
+    return ( () => {
+        window.removeEventListener("scroll", scrollHandler);
+    });
+  }, [])
 
-  // const isInView = () => {
-  //   if (dropRef.current) {
-  //     const menu = dropRef.current.getBoundingClientRect();
-  //     const button = dropRef.current.offsetParent.getBoundingClientRect();
-  //     height === 0 && setHeight(menu.height);
+  const isInView = () => {
+    if (dropRef.current) {
+      const menu = dropRef.current.getBoundingClientRect();
+      const button = dropRef.current.offsetParent.getBoundingClientRect();
+      height === 0 && setHeight(menu.height);
 
-  //     return button.bottom + menu.height <= window.innerHeight;
-  //   }
-  //   return false;
-  // };
+      return button.bottom + menu.height <= window.innerHeight;
+    }
+    return false;
+  };
 
-  // const scrollHandler = () => {
-  //   setInView(() => {
-  //     return isInView();
-  //   });
-  // };
+  const scrollHandler = () => {
+    setInView(() => {
+      return isInView();
+    });
+  };
 
   return (
-    <StyledDropdownMenu drop={drop}>
+    <StyledDropdownMenu drop={drop}
+      style={{
+        top: inView ? '' : `-${height}px`,
+      }}
+      ref={dropRef}>
       {children}
     </StyledDropdownMenu>
   )
