@@ -101,10 +101,20 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    margin: 0px;
   }
 
   *, ::after {
     box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid ${lightGrey};
   }
 
   ${setSpaceUtil('mar', 'margin')}
@@ -435,6 +445,7 @@ export const STTextarea = styled.textarea`
   border: 1px solid ${({error}) => error ? bgColor['danger'] : lightGrey};
   border-radius: 3px;
   width: 100%;
+  max-width: 100%;
   font-size: ${({size}) => setFontSize(size)}em;
   font-weight: 300;
   padding: ${({size}) => setFontSize(size) / 2}em 8px;
