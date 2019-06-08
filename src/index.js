@@ -98,6 +98,14 @@ const setAlignUtil = (val) => {
 }
 
 export const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  *, ::after {
+    box-sizing: border-box;
+  }
+
   ${setSpaceUtil('mar', 'margin')}
   ${setSpaceUtil('mart', 'margin-top')}
   ${setSpaceUtil('marb', 'margin-bottom')}
@@ -130,7 +138,6 @@ export const GlobalStyle = createGlobalStyle`
     ====================================  */
 
 export const STContainer = styled.div`
-  box-sizing: border-box;
   width: 100%;
   margin-top: ${pointSixteen}px;
   padding: 0px ${pointSixteen}px 0px ${pointSixteen}px;
@@ -138,7 +145,6 @@ export const STContainer = styled.div`
 `;
 
 const StyledRow = styled.div`
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   margin: 0px -${({spacing}) => spacing / 2 || pointEight}px ${pointSixteen}px -${({spacing}) => spacing / 2 || pointEight}px;
@@ -184,7 +190,6 @@ const columnFlexMixin = (size, spacing) => {
 }
 
 export const STColumn = styled.div`
-  box-sizing: border-box;
   // border: 1px solid;
   display: ${({align}) => align ? 'flex' : 'initial'};
   flex-wrap: wrap;
@@ -278,7 +283,6 @@ const lightenDarkenColor = (col, amt) => {
 }
 
 export const STButton = styled.button`
-  box-sizing: border-box;
   min-height: ${({size}) => setSize(size) || 40}px;
   padding: ${pointEight}px ${({outline}) => pointSixteen - (outline ? .4 : 0)}px;
   background-color: ${({tone, outline}) => outline ? 'white' : bgColor[tone || 'primary']};
@@ -329,7 +333,6 @@ export const STButton = styled.button`
     ====================================  */
 
 export const STButtonGroup = styled.div`
-  box-sizing: border-box;
   align-self: flex-start;
 
   & ${STButton} {
@@ -607,7 +610,6 @@ export const STInputGroup = styled.div`
 `;
 
 export const STInputGroupText = styled.div`
-  box-sizing: border-box;
   border: 1px solid ${lightGrey};
   display: flex;
   align-items: center;
@@ -623,7 +625,6 @@ export const STInputGroupText = styled.div`
     ====================================  */
 
 export const STForm = styled(STRow).attrs(() => ({ as: 'form'}))`
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   margin: 0px -${({spacing}) => spacing / 2 || pointEight}px ${pointSixteen}px -${({spacing}) => spacing / 2 || pointEight}px;
@@ -656,6 +657,7 @@ export const STLabel = styled(STColumn).attrs(({top}) => ({ className: top ? 'la
 export const STTable = styled.table`
   width: 100%;
   font-size: 1rem;
+  border-collapse: collapse;
 
   & > thead {
     border-top: 2px solid  ${lightGrey};

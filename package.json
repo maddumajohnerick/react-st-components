@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js",
+    "build-docs": "webpack --config webpack.docsConfig.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/maddumajohnerick/st-components#readme",
   "dependencies": {
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "styled-components": "^4.3.1",
     "webpack": "^4.33.0"
   },
@@ -39,9 +41,12 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react-live": "^2.1.2",
     "webpack-cli": "^3.3.2"
   }
 }
