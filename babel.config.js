@@ -8,7 +8,10 @@ module.exports = function (api) {
   const plugins = [
     "transform-object-rest-spread",
     "transform-react-jsx",
-    "babel-plugin-styled-components"
+    [
+      "babel-plugin-styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
+    ]
   ];
 
   return {
