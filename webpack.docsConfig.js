@@ -10,7 +10,7 @@ module.exports = {
   mode: 'production',
   entry: ['babel-polyfill', './src/docs.js'],
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'docs.js',
   },
   module: {
