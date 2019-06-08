@@ -28,4 +28,4 @@ On your index.html add
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 ```
 
-See [Docs](https://maddumajohnerick.github.io/cheers-alert/examples/) for the styled components.
+See [Docs](https://maddumajohnerick.github.io/react-st-components/docs/) for the styled components.
