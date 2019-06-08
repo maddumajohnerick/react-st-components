@@ -1,0 +1,41 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .editor-wrapper {
+      border: 1px solid lightgray;
+      display: flex;
+      width: 100%;
+    }
+
+    .editor-wrapper > div {
+      flex-grow: 1 !important;
+      flex-basis: 50%;
+    } 
+
+    .editor-wrapper > div:first-child {
+      border-right: 1px solid lightgray;
+      background-color: #1d1f27;
+      caret-color: white;
+    } 
+
+    .editor-wrapper > div:last-child {
+      padding: 8px;
+    } 
+
+    .editor-textarea, .editor-preview {
+      height : 325px;
+      overflow-y: auto;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <title>react-st-components</title>
+</head>
+<body>
+  <section id="index"></section>
+<script type="text/javascript" src="docs.js"></script></body>
+</html>
