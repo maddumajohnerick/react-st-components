@@ -98,6 +98,19 @@ const setAlignUtil = (val) => {
 }
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: Roboto;
+    src: url("../public/fonts/Roboto-Light.woff?v=2.137") format("woff"), url("../public/fonts/Roboto-Light.woff?v=2.137") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: Roboto;
+    src: url("../public/fonts/Roboto-Regular.woff?v=2.137") format("woff"), url("../public/fonts/Roboto-Regular.woff?v=2.137") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
   body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -306,6 +319,8 @@ export const STButton = styled.button`
   transition: .2s;
   font-weight: ${({outline}) => outline ? 400 : 300};
   position: relative;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
 
   :not([disabled]):hover {
     background-color: ${({tone, outline}) => outline ? bgColor[tone || 'primary'] : lightenDarkenColor(bgColor[tone || 'primary'], 30)};
