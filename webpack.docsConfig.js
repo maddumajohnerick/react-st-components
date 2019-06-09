@@ -12,6 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'docs.js',
+    publicPath: path.resolve(__dirname, 'docs')
   },
   module: {
     rules: [
