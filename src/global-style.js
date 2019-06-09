@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+import RobotoLight from './fonts/Roboto-Light.woff';
+import RobotoRegular from './fonts/Roboto-Regular.woff';
+
 import { pointEight, lightGrey } from './variables';
 
 const setSpaceUtil = (className, property) => {
@@ -66,13 +69,13 @@ const setAlignUtil = (val) => {
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: Roboto;
-    src: url("../public/fonts/Roboto-Light.woff?v=2.137") format("woff"), url("../public/fonts/Roboto-Light.woff?v=2.137") format("woff");
+    src: url(${RobotoLight}) format("woff");
     font-weight: 300;
     font-style: normal;
   }
   @font-face {
     font-family: Roboto;
-    src: url("../public/fonts/Roboto-Regular.woff?v=2.137") format("woff"), url("../public/fonts/Roboto-Regular.woff?v=2.137") format("woff");
+    src: url(${RobotoRegular}) format("woff");
     font-weight: 400;
     font-style: normal;
   }
