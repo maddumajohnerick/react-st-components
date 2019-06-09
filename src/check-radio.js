@@ -1,7 +1,7 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import { pointSixteen, pointEight, bgColor, lightGrey, setSize, setFontSize, lightenDarkenColor } from './variables';
+import { bgColor, lightGrey, setSize, setFontSize } from './variables';
 
 const StyledCheckRadioWrapper = styled.label`
   display: ${({inline}) => inline ? 'inline-flex' : 'flex'};

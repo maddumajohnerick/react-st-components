@@ -12,7 +12,6 @@ export const STSelect = styled.select`
   font-weight: 300;
   transition: .2s;
 
-
   :focus {
     outline: none;
     box-shadow: 0 0 0 2px ${({error}) => lightenDarkenColor(bgColor[error ? 'danger' : 'primary'], 110)};

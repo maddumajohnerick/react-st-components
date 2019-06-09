@@ -7,7 +7,6 @@ export const STContainer = styled.div`
   width: 100%;
   margin-top: ${pointSixteen}px;
   padding: 0px ${pointSixteen}px 0px ${pointSixteen}px;
-  
 `;
 
 const StyledRow = styled.div`
