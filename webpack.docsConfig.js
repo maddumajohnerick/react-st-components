@@ -23,12 +23,26 @@ module.exports = {
           plugins: ['transform-class-properties']
         }
       },
+      // {
+      //   test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, 
+      //   use: [{
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 100000
+      //     }
+      //   }]
+      // }
       {
-        test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, 
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 100000
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
           }
         }]
       }
