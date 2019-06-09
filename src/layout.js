@@ -95,7 +95,7 @@ export const STColumn = styled.div`
     ${({xl, lg, md, sm, xs, spacing}) => columnFlexMixin(xl || lg || md || sm || xs, spacing)}
   }
 
-  & > ${STRow} ${STCardList} {
+  & > ${STRow} .st-card-list {
     margin-bottom: -16px;
   }
 

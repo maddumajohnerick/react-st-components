@@ -4,7 +4,7 @@ import { pointSixteen, lightGrey } from './variables';
 import { STRow, STColumn } from './layout';
 import { STButton } from './button';
 
-export const STCardList = styled(STRow)``;
+export const STCardList = styled(STRow).attrs(() => ({classname: 'st-card-list'}))``;
 
 export const STCard = styled(STColumn)`
   border: 1px solid ${lightGrey};
