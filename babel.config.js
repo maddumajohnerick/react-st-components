@@ -6,13 +6,13 @@ module.exports = function (api) {
     "@babel/preset-react"
   ];
   const plugins = [
-    "@babel/plugin-proposal-class-properties",
     "transform-object-rest-spread",
     "transform-react-jsx",
     [
       "babel-plugin-styled-components",
       { "ssr": true, "displayName": true, "preprocess": false }
-    ]
+    ],
+    "@babel/plugin-proposal-class-properties"
   ];
 
   return {
