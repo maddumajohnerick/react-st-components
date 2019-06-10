@@ -57,7 +57,7 @@ const StyledCheckRadioWrapper = styled.label`
     width: 16px;
     border: 1px solid ${lightGrey};
     background: white;
-    border-radius: 3px;
+    border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
     transition: .2s; 
 
     :after {

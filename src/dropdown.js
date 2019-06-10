@@ -47,7 +47,7 @@ export const STDropdownButton = (props) => {
 
 const StyledDropdownMenu = styled.div`
   position: absolute;
-  border-radius: 3px;
+  border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   border: 1px solid ${lightGrey};
   min-width: 100%;
   background-color: white;

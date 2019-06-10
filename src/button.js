@@ -6,7 +6,7 @@ export const STButton = styled.button`
   padding: ${pointEight}px ${({outline}) => pointSixteen - (outline ? .4 : 0)}px;
   background-color: ${({tone, outline, theme}) => outline ? 'white' : setColor(tone, theme.tones)};
   border: 1px solid ${({tone, theme}) => setColor(tone, theme.tones)};
-  border-radius: 3px;
+  border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   color: ${({tone, outline, theme}) => !outline ? 'white' : setColor(tone, theme.tones)};
   font-size: ${({size}) => setFontSize(size)}rem;
   line-height: ${({size}) => setFontSize(size) || 1}rem;
@@ -42,7 +42,7 @@ export const STButton = styled.button`
       width: calc(100% + 2px);
       top: -1px;
       left: -1px;
-      border-radius: 3px;
+      border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
       background-color: grey; 
       opacity: .4;
     }

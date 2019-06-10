@@ -4,7 +4,7 @@ import { setColor, lightGrey, setFontSize, lightenDarkenColor } from './variable
 
 export const STTextarea = styled.textarea`
   border: 1px solid ${({error, theme}) => error ? setColor('danger', theme.tones) : lightGrey};
-  border-radius: 3px;
+  border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   width: 100%;
   max-width: 100%;
   font-size: ${({size}) => setFontSize(size)}em;

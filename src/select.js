@@ -4,7 +4,7 @@ import { setColor, lightGrey, setSize, setFontSize, lightenDarkenColor } from '.
 
 export const STSelect = styled.select`
   border: 1px solid ${({error, theme}) => error ? setColor('danger', theme.tones) : lightGrey};
-  border-radius: 3px;
+  border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   width: 100%;
   height: ${({size}) => setSize(size)}px;
   padding: 0px 8px;

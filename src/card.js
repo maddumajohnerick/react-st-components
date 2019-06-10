@@ -8,7 +8,7 @@ export const STCardList = styled(STRow).attrs(() => ({classname: 'st-card-list'}
 
 export const STCard = styled(STColumn)`
   border: 1px solid ${lightGrey};
-  border-radius: 3px;
+  border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   flex-direction: column;
   align-content: initial;
   justify-content: initial;

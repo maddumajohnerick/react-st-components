@@ -11,13 +11,13 @@ export const STButtonGroup = styled.div`
     margin-right: -1px;
 
     :first-child {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+      border-top-left-radius: ${({theme}) => theme.flat ? 0 : 3}px;
+      border-bottom-left-radius: ${({theme}) => theme.flat ? 0 : 3}px;
     }
     
     :last-child {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-top-right-radius: ${({theme}) => theme.flat ? 0 : 3}px;
+      border-bottom-right-radius: ${({theme}) => theme.flat ? 0 : 3}px;
     }
   }
 `;
