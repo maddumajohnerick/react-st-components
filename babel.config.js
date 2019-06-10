@@ -6,6 +6,7 @@ module.exports = function (api) {
     "@babel/preset-react"
   ];
   const plugins = [
+    "@babel/plugin-proposal-class-properties",
     "transform-object-rest-spread",
     "transform-react-jsx",
     [
