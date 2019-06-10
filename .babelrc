@@ -4,7 +4,8 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    "transform-object-rest-spread",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-arrow-functions",
     "transform-react-jsx",
     [
       "babel-plugin-styled-components",
