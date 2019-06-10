@@ -6,7 +6,7 @@ export const STInput = styled.input`
   border: 1px solid ${({error, theme}) => error ? setColor('danger', theme.tones) : lightGrey};
   border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   height: ${({size}) => setSize(size)}px;
-  font-size: ${({size}) => setFontSize(size)}em;
+  font-size: ${({size}) => setFontSize(size)}rem;
   font-weight: 300;
   width: 100%;
   padding: 0px 8px;

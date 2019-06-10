@@ -7,7 +7,8 @@ export const STTextarea = styled.textarea`
   border-radius: ${({theme}) => theme.flat ? 0 : 3}px;
   width: 100%;
   max-width: 100%;
-  font-size: ${({size}) => setFontSize(size)}em;
+  font-size: ${({size}) => setFontSize(size)}rem;
+  line-height: ${({size}) => setFontSize(size) + .4}rem;
   font-weight: 300;
   padding: ${({size}) => setFontSize(size) / 2}em 8px;
   box-shadow: none;

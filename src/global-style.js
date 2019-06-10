@@ -1,7 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-import RobotoLight from './fonts/Roboto-Light.woff';
-import RobotoRegular from './fonts/Roboto-Regular.woff';
+import RobotoLight from './fonts/Roboto-Light.woff2';
+import RobotoRegular from './fonts/Roboto-Regular.woff2';
 
 import { pointEight, lightGrey } from './variables';
 
@@ -71,13 +71,13 @@ export const STThemeProvider = ThemeProvider;
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: Roboto;
-    src: url(${RobotoLight}) format("woff");
+    src: url(${RobotoLight}) format("woff2");
     font-weight: 300;
     font-style: normal;
   }
   @font-face {
     font-family: Roboto;
-    src: url(${RobotoRegular}) format("woff");
+    src: url(${RobotoRegular}) format("woff2");
     font-weight: 400;
     font-style: normal;
   }
@@ -85,7 +85,13 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
     margin: 0px;
+  }
+
+  input, textarea, select {
+    font-family: 'Roboto', sans-serif;
   }
 
   *, ::after {

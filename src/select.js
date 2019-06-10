@@ -8,7 +8,7 @@ export const STSelect = styled.select`
   width: 100%;
   height: ${({size}) => setSize(size)}px;
   padding: 0px 8px;
-  font-size: ${({size}) => setFontSize(size)}em;
+  font-size: ${({size}) => setFontSize(size)}rem;
   font-weight: 300;
   transition: .2s;
 
