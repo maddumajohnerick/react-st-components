@@ -765,6 +765,40 @@ STLabel Props:
 
         <hr />
 
+        <STRow><h2>STThemeProvider</h2></STRow>
+        <STRow>
+          <STColumn>
+            <div className="editor-wrapper">
+              <LiveProvider scope={scope} code={`<STThemeProvider theme={{
+    tones: {
+      primary: '#ff0000'
+    },
+    flat: true
+  }}>
+  <STRow>
+    <STColumn>
+      <STButton>Primary</STButton>
+      <STButton tone={'secondary'}>Secondary</STButton>
+      <STButton tone={'success'}>Success</STButton>
+      <STButton tone={'danger'}>Danger</STButton>
+      <STButton tone={'warning'}>Warning</STButton>
+    </STColumn>
+  </STRow>
+</STThemeProvider>`}>
+                <div className="editor-textarea">
+                  <LiveEditor />
+                </div>
+                <div className="editor-preview">
+                  <LiveError />
+                  <LivePreview />
+                </div>
+              </LiveProvider>
+            </div>
+          </STColumn>
+        </STRow>
+
+        <hr />
+
         <STRow><h2>Utility Classes</h2></STRow>
         <STRow>
           <STColumn>

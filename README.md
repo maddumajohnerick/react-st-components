@@ -32,15 +32,19 @@ ReactDOM.render(<App />, document.getElementById('index'))
 ```
 
 ### Adding Theme
+Wrap your application or selected parts with `<STThemeProvider />` for it to pass down the themes.
 ```js
 import ReactDOM from 'react-dom';
 import { STThemeProvider } from 'react-st-components'; //for theme provider
+import Header from './header-example';
+import Contents from './contents-example';
 
 const App = () => {
     return (
         <>
             <STThemeProvider theme={theme}>
-                {/* Rest of your code */}
+                <Header />
+                <Contents />
             </STThemeProvider>
         </>
     )
