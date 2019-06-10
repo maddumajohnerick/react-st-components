@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { bgColor, lightGrey, setSize, setFontSize, lightenDarkenColor } from './variables';
+import { setColor, lightGrey, setSize, setFontSize, lightenDarkenColor } from './variables';
 
 export const STSelect = styled.select`
-  border: 1px solid ${({error}) => error ? bgColor['danger'] : lightGrey};
+  border: 1px solid ${({error, theme}) => error ? setColor('danger', theme.tones) : lightGrey};
   border-radius: 3px;
   width: 100%;
   height: ${({size}) => setSize(size)}px;
@@ -14,7 +14,7 @@ export const STSelect = styled.select`
 
   :focus {
     outline: none;
-    box-shadow: 0 0 0 2px ${({error}) => lightenDarkenColor(bgColor[error ? 'danger' : 'primary'], 110)};
+    box-shadow: 0 0 0 2px ${({error, theme}) => lightenDarkenColor(setColor(error ? 'danger' : 'primary', theme.tones), 110)};
   }
 
   :disabled{

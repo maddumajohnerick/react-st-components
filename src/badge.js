@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import { bgColor } from './variables';
+import { setColor } from './variables';
 
 export const STBadge = styled.span`
   padding: .2em .5em;
-  background-color: ${({tone}) => bgColor[tone || 'primary']};
+  background-color: ${({tone, theme}) => setColor(tone, theme.tones)};
   border-radius: 50px;
   color: white;
   font-weight: 500;

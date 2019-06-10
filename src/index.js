@@ -1,4 +1,4 @@
-export { GlobalStyle } from './global-style';
+export { GlobalStyle, STThemeProvider } from './global-style';
 export { STContainer, STRow, STColumn } from './layout';
 export { STBadge } from './badge';
 export { STButton } from './button';

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import RobotoLight from './fonts/Roboto-Light.woff';
 import RobotoRegular from './fonts/Roboto-Regular.woff';
@@ -65,6 +65,8 @@ const setAlignUtil = (val) => {
   }
   return styleStr;
 }
+
+export const STThemeProvider = ThemeProvider;
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {

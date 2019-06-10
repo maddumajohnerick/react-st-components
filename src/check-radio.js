@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { bgColor, lightGrey, setSize, setFontSize } from './variables';
+import { setColor, lightGrey, setSize, setFontSize } from './variables';
 
 const StyledCheckRadioWrapper = styled.label`
   display: ${({inline}) => inline ? 'inline-flex' : 'flex'};
@@ -24,18 +24,18 @@ const StyledCheckRadioWrapper = styled.label`
     width: 0;
 
     :checked ~ .checkmark {
-      border: 1px solid ${bgColor['primary']};
+      border: 1px solid ${({theme}) => setColor('primary', theme.tones)};
 
       :after {
         display: block;
-        border: solid ${bgColor['primary']};
+        border: solid ${({theme}) => setColor('primary', theme.tones)};
         border-width: 0 3px 3px 0;
       }
     }
 
     &[type=radio] {
       :checked ~ .checkmark {
-        border: 8px solid ${bgColor['primary']};
+        border: 8px solid ${({theme}) => setColor('primary', theme.tones)};
       }
 
       ~ .checkmark {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { GlobalStyle, STContainer, STRow, STColumn, STBadge, STButton, STButtonGroup, STCardList, STCard,
   STCardImage, STCardBody, STCardFooter, STInput, STInputGroup, STInputGroupText, STForm, STLabel,
   STTextarea, STSelect, STItem, STOptionsWrapper, STCheckbox, STRadio, STTable, STDropdown,
-  STDropdownMenu, STDropdownItem, STDropdownButton } from './index';
+  STDropdownMenu, STDropdownItem, STDropdownButton, STThemeProvider } from './index';
 
 import {
   LiveProvider,
@@ -59,7 +59,7 @@ Position:
 const scope = { STContainer, STRow, STColumn, STBadge, STButton, STButtonGroup, STCardList, STCard,
   STCardImage, STCardBody, STCardFooter, STInput, STInputGroup, STInputGroupText, STForm, STLabel,
   STTextarea, STSelect, STItem, STOptionsWrapper, STCheckbox, STRadio, STTable, STDropdown,
-  STDropdownMenu, STDropdownItem, STDropdownButton };
+  STDropdownMenu, STDropdownItem, STDropdownButton, STThemeProvider };
 
 function Styled() {
   return (
@@ -91,8 +91,8 @@ function Styled() {
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -146,8 +146,8 @@ Notes:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -189,8 +189,8 @@ Notes:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -242,8 +242,8 @@ Notes:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -285,8 +285,8 @@ Notes:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -343,8 +343,8 @@ STCardImage Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -389,8 +389,8 @@ STCardImage Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -457,8 +457,8 @@ STCardImage Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -515,8 +515,8 @@ STCardImage Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -588,8 +588,8 @@ STCardImage Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -638,8 +638,8 @@ STCardImage Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -688,8 +688,8 @@ STLabel Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview" style={{overflowY: 'initial'}}>
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>
@@ -743,8 +743,8 @@ STLabel Props:
                 <div className="editor-textarea">
                   <LiveEditor />
                 </div>
-                <LiveError />
                 <div className="editor-preview">
+                  <LiveError />
                   <LivePreview />
                 </div>
               </LiveProvider>

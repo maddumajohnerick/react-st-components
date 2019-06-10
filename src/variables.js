@@ -11,6 +11,20 @@ export const bgColor = {
 
 export const lightGrey = '#d0d0d0';
 
+export const setColor = (tone, themeTones) => {
+  themeTones = themeTones || {};
+  const toneVal = tone || 'primary';
+  const color = {
+    primary: themeTones.primary || bgColor.primary,
+    secondary: themeTones.secondary || bgColor.secondary,
+    success: themeTones.success || bgColor.success,
+    danger: themeTones.danger || bgColor.danger,
+    warning: themeTones.warning || bgColor.warning,
+  };
+
+  return color[toneVal];
+}
+
 export const setSize = (size) => {
   if (size === 'xs') return 28;
   if (size === 'sm') return 32;

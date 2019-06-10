@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { pointSixteen, pointEight, bgColor, setSize, setFontSize, lightenDarkenColor } from './variables';
+import { pointSixteen, pointEight, setColor, setSize, setFontSize, lightenDarkenColor } from './variables';
 
 export const STButton = styled.button`
   min-height: ${({size}) => setSize(size) || 40}px;
   padding: ${pointEight}px ${({outline}) => pointSixteen - (outline ? .4 : 0)}px;
-  background-color: ${({tone, outline}) => outline ? 'white' : bgColor[tone || 'primary']};
-  border: 1px solid ${({tone}) => bgColor[tone || 'primary']};
+  background-color: ${({tone, outline, theme}) => outline ? 'white' : setColor(tone, theme.tones)};
+  border: 1px solid ${({tone, theme}) => setColor(tone, theme.tones)};
   border-radius: 3px;
-  color: ${({tone, outline}) => !outline ? 'white' : bgColor[tone || 'primary']};
+  color: ${({tone, outline, theme}) => !outline ? 'white' : setColor(tone, theme.tones)};
   font-size: ${({size}) => setFontSize(size)}rem;
   line-height: ${({size}) => setFontSize(size) || 1}rem;
   margin-right: ${pointEight}px;
@@ -18,16 +18,16 @@ export const STButton = styled.button`
   font-family: 'Roboto', sans-serif;
 
   :not([disabled]):hover {
-    background-color: ${({tone, outline}) => outline ? bgColor[tone || 'primary'] : lightenDarkenColor(bgColor[tone || 'primary'], 30)};
-    border: 1px solid ${({tone, outline}) => outline ? lightenDarkenColor(bgColor[tone || 'primary'], 0) : lightenDarkenColor(bgColor[tone || 'primary'], 30)};
+    background-color: ${({tone, outline, theme}) => outline ? setColor(tone, theme.tones) : lightenDarkenColor(setColor(tone, theme.tones), 30)};
+    border: 1px solid ${({tone, outline, theme}) => outline ? lightenDarkenColor(setColor(tone, theme.tones), 0) : lightenDarkenColor(setColor(tone, theme.tones), 30)};
     color: white;
   }
   
   :not([disabled]):focus, &.focused {
     outline: none;
-    background-color: ${({tone, outline}) => outline ? 'transparent' : bgColor[tone || 'primary']};
-    box-shadow: 0 0 0 0.2rem ${({tone}) => lightenDarkenColor(bgColor[tone || 'primary'], 110)};
-    color: ${({tone, outline}) => !outline ? 'white' : bgColor[tone || 'primary']};
+    background-color: ${({tone, outline, theme}) => outline ? 'transparent' : setColor(tone, theme.tones)};
+    box-shadow: 0 0 0 0.2rem ${({tone, theme}) => lightenDarkenColor(setColor(tone, theme.tones), 110)};
+    color: ${({tone, outline, theme}) => !outline ? 'white' : setColor(tone, theme.tones)};
     z-index: 3;
   }
   
