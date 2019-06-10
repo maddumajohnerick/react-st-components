@@ -1,6 +1,8 @@
 # react-st-components
 styled components for react
 
+ [![npm](https://img.shields.io/npm/v/react-st-components.svg)](https://www.npmjs.com/package/react-st-components) [![npm downloads](https://img.shields.io/npm/dt/react-st-components.svg?maxAge=2592000)](http://www.npmtrends.com/react-st-components) [![Maintenance Status](https://img.shields.io/badge/maintenance-active-green.svg)](https://github.com/maddumajohnerick/react-st-components) [![Code Climate](https://codeclimate.com/github/maddumajohnerick/react-st-components/badges/gpa.svg)](https://codeclimate.com/github/maddumajohnerick/react-st-components)
+
 ### Install
 #### NPM
 ```js
@@ -10,7 +12,10 @@ $ npm install react-st-components --save
 ### Usage
 ```js
 import ReactDOM from 'react-dom';
-import { GlobalStyle, STContainer } from 'react-st-components'; //for the global style 
+import { 
+    GlobalStyle, //for the global styles
+    STContainer 
+} from 'react-st-components'; 
 
 const App = () => {
     return (
