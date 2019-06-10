@@ -4,13 +4,11 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-proposal-class-properties",
     "transform-react-jsx",
     [
       "babel-plugin-styled-components",
       { "ssr": true, "displayName": true, "preprocess": false }
-    ],
-    "@babel/plugin-proposal-class-properties"
+    ]
   ]
 }
