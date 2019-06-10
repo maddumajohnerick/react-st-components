@@ -58,6 +58,6 @@ const theme = {
 ```
   - tones - [Object] containing the theme color palette(optional).
     - tones.<palette> - [String] `hex` color code(optional).
-  - flat - [Boolean] is set to `true`, all `border-radius` of styled components is set to `0px`(optional, defaults to false).
+  - flat - [Boolean] if set to `true`, all `border-radius` of styled components is set to `0px`(optional, defaults to false).
 
 See [Docs](https://maddumajohnerick.github.io/react-st-components/docs/) for more styled components.
