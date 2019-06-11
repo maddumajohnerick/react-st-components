@@ -1,6 +1,6 @@
 {
   "name": "react-st-components",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "styled components for react",
   "main": "build/index.js",
   "scripts": {

@@ -1,7 +1,7 @@
 # react-st-components
 styled components for react
 
- [![npm](https://img.shields.io/npm/v/react-st-components.svg)](https://www.npmjs.com/package/react-st-components) [![npm downloads](https://img.shields.io/npm/dt/react-st-components.svg)](http://www.npmtrends.com/react-st-components) [![Maintenance Status](https://img.shields.io/badge/maintenance-active-green.svg)](https://github.com/maddumajohnerick/react-st-components) [![Code Climate](https://codeclimate.com/github/maddumajohnerick/react-st-components/badges/gpa.svg)](https://codeclimate.com/github/maddumajohnerick/react-st-components)
+ [![npm](https://img.shields.io/npm/v/react-st-components.svg)](https://www.npmjs.com/package/react-st-components) [![install size](https://packagephobia.now.sh/badge?p=react-st-components)](https://packagephobia.now.sh/result?p=react-st-components) [![npm downloads](https://img.shields.io/npm/dt/react-st-components.svg)](http://www.npmtrends.com/react-st-components) [![Maintenance Status](https://img.shields.io/badge/maintenance-active-green.svg)](https://github.com/maddumajohnerick/react-st-components) [![Code Climate](https://codeclimate.com/github/maddumajohnerick/react-st-components/badges/gpa.svg)](https://codeclimate.com/github/maddumajohnerick/react-st-components)
 
 ### Install
 #### NPM
