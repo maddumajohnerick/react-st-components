@@ -1,7 +1,7 @@
-os: windows
 language: node_js
 node_js:
   - "lts/*"
-install:
+before_script:
   - npm install
-script: npm run build
+script:
+  - npm run build
